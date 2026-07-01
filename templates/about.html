@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}
+About | Shivank Rastogi
+{% endblock %}
+
+{% block content %}
+
+<!-- ========================= ABOUT SECTION ========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-wrapper">
+
+            <!-- Left: Image -->
+
+            <div class="about-image fade-left">
+
+                <img src="{{ url_for('static', filename='images/about.jpg') }}"
+                     alt="Shivank Rastogi">
+
+            </div>
+
+            <!-- Right: Content -->
+
+            <div class="about-content fade-right">
+
+                <h4>About Me</h4>
+
+                <h2>
+
+                    I turn <span>messy data</span> into
+                    reliable, scalable systems
+
+                </h2>
+
+                <p>
+
+                    I'm a Database Developer with hands-on experience
+                    building and optimizing SQL Server and MySQL systems.
+                    My work spans writing efficient queries, designing
+                    ETL pipelines, automating reports with SSRS, and
+                    ensuring data integrity through structured QA testing.
+
+                </p>
+
+                <p>
+
+                    I care about performance as much as correctness —
+                    a query that works isn't enough if it doesn't scale.
+                    Outside of databases, I build clean, functional web
+                    applications using Python and Flask.
+
+                </p>
+
+                <!-- Personal Info -->
+
+                <div class="about-info">
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-user"></i>
+                        <div>
+                            <strong>Name</strong>
+                            <span>Shivank Rastogi</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>your@email.com</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <span>India</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <div>
+                            <strong>Role</strong>
+                            <span>Database Developer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="about-buttons">
+
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Let's Talk
+                    </a>
+
+                    <a href="{{ url_for('static', filename='files/Shivank_Resume.pdf') }}"
+                       class="btn btn-outline"
+                       target="_blank">
+                        <i class="fa-solid fa-download"></i>
+                        Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="about-stats fade-up">
+
+            <div class="stat-card">
+                <h3><span class="counter" data-target="3">0</span>+</h3>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="stat-card">
+                <h3><span class="counter" data-target="25">0</span>+</h3>
+                <p>Projects Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3><span class="counter" data-target="100">0</span>+</h3>
+                <p>Queries Optimized</p>
+            </div>
+
+            <div class="stat-card">
+                <h3><span class="counter" data-target="100">0</span>%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+
+        </div>
+
+        <!-- What I Do -->
+
+        <div class="services fade-up">
+
+            <h2 class="section-title">What I Do</h2>
+
+            <p class="section-subtitle">
+
+                A quick look at where I bring the most value.
+
+            </p>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Database Design</h3>
+                    <p>Building normalized, scalable schemas for real-world applications.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>Query Optimization</h3>
+                    <p>Rewriting slow queries and indexing strategies for performance.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <h3>ETL & Automation</h3>
+                    <p>Automating data pipelines using SSIS and Python scripts.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-vial"></i>
+                    <h3>QA Testing</h3>
+                    <p>Validating data accuracy and system reliability before release.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

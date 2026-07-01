@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}
+Projects | Shivank Rastogi
+{% endblock %}
+
+{% block content %}
+
+<!-- ========================= PROJECTS SECTION ========================= -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title fade-up">My Projects</h2>
+
+        <p class="section-subtitle fade-up">
+
+            A selection of projects showcasing database design,
+            automation, and full-stack development work.
+
+        </p>
+
+        <!-- Search -->
+
+        <div class="search-box fade-up">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+        </div>
+
+        <!-- Filters -->
+
+        <div class="filter-buttons fade-up">
+
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="database">Database</button>
+            <button data-filter="python">Python</button>
+            <button data-filter="web">Web App</button>
+
+        </div>
+
+        <!-- Project Grid -->
+
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+
+            <div class="project-card fade-up" data-category="database">
+
+                <img src="{{ url_for('static', filename='images/project1.jpg') }}"
+                     alt="Sales Database Optimization">
+
+                <div class="project-content">
+
+                    <h2>Sales Database Optimization</h2>
+
+                    <p>
+
+                        Redesigned schema and rewrote key stored
+                        procedures for a retail sales system, cutting
+                        report generation time significantly.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>SQL Server</span>
+                        <span>T-SQL</span>
+                        <span>Performance Tuning</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Source Code</a>
+                    </div>
+
+                    <div class="project-footer">
+                        <span><i class="fa-solid fa-star"></i> Featured</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 2 -->
+
+            <div class="project-card fade-up" data-category="python">
+
+                <img src="{{ url_for('static', filename='images/project2.jpg') }}"
+                     alt="ETL Automation Pipeline">
+
+                <div class="project-content">
+
+                    <h2>ETL Automation Pipeline</h2>
+
+                    <p>
+
+                        Built a Python-based ETL pipeline to automate
+                        daily data extraction, transformation, and
+                        loading from multiple sources into SQL Server.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>Python</span>
+                        <span>SSIS</span>
+                        <span>Automation</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Source Code</a>
+                    </div>
+
+                    <div class="project-footer">
+                        <span><i class="fa-solid fa-star"></i> Featured</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 3 -->
+
+            <div class="project-card fade-up" data-category="web">
+
+                <img src="{{ url_for('static', filename='images/project3.jpg') }}"
+                     alt="Portfolio Website">
+
+                <div class="project-content">
+
+                    <h2>Portfolio Website</h2>
+
+                    <p>
+
+                        This portfolio itself — built with Flask,
+                        Jinja templates, and vanilla JavaScript for
+                        interactivity.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Source Code</a>
+                    </div>
+
+                    <div class="project-footer">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 4 -->
+
+            <div class="project-card fade-up" data-category="database">
+
+                <img src="{{ url_for('static', filename='images/project4.jpg') }}"
+                     alt="Inventory Management System">
+
+                <div class="project-content">
+
+                    <h2>Inventory Management System</h2>
+
+                    <p>
+
+                        Designed a normalized MySQL schema for
+                        inventory tracking with real-time stock
+                        alerts and SSRS reporting.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>MySQL</span>
+                        <span>SSRS</span>
+                        <span>Database Design</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Source Code</a>
+                    </div>
+
+                    <div class="project-footer">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
