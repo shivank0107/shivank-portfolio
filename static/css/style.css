@@ -284,8 +284,11 @@ section{
 
     transition:var(--transition);
 
-}
+    position:relative;    /* ADD THIS */
 
+    overflow:hidden;      /* ADD THIS */
+
+}
 .btn-primary{
 
     background:linear-gradient(
@@ -4219,4 +4222,23 @@ section{
 @keyframes statusPulse{
     0%,100%{ box-shadow:0 0 0 4px rgba(16,185,129,.2); }
     50%{ box-shadow:0 0 0 8px rgba(16,185,129,.1); }
+}
+/* ===========================
+   RIPPLE EFFECT
+=========================== */
+
+.ripple{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.5);
+    transform:scale(0);
+    animation:rippleEffect .6s linear;
+    pointer-events:none;
+}
+
+@keyframes rippleEffect{
+    to{
+        transform:scale(2.5);
+        opacity:0;
+    }
 }
