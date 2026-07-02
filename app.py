@@ -7,9 +7,9 @@ app = Flask(__name__)
 app.secret_key = "change-this-to-any-random-secret-string"
 
 # ==========================================================
-# EMAIL CONFIG
+# EMAIL CONFIG — apni details yahan bharo
 # ==========================================================
-EMAIL_ADDRESS = "shivank01gmail@gmail.com"
+EMAIL_ADDRESS = "shivank01@gmail.com"
 EMAIL_APP_PASSWORD = "qiqssgiuavqjgbbk"
 RECEIVING_EMAIL = "shivank01@gmail.com"
 
@@ -60,9 +60,8 @@ def send_message():
         body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
         msg.attach(MIMEText(body, "plain"))
 
-        # Using SMTP_SSL on port 465 with a short timeout so the
-        # worker fails fast instead of hanging and crashing the app.
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=10) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
             server.login(EMAIL_ADDRESS, EMAIL_APP_PASSWORD)
             server.send_message(msg)
 
