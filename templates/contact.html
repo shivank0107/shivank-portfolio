@@ -47,7 +47,7 @@ Contact | Shivank Rastogi
 
                     <h2><i class="fa-solid fa-location-dot"></i> Location</h2>
 
-                    <a href="#">Noida, Uttar pardesh, India</a>
+                    <a href="#">Noida, Uttar Pradesh, India</a>
 
                 </div>
 
@@ -77,15 +77,13 @@ Contact | Shivank Rastogi
 
                 <h2>Send a Message</h2>
 
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class="form-alert {{ category }}">{{ message }}</div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+                <!--
+                    IMPORTANT: Replace YOUR-FORM-ID below with your
+                    actual Formspree endpoint from formspree.io
+                    Example: https://formspree.io/f/xabcwxyz
+                -->
 
-                <form action="{{ url_for('send_message') }}" method="POST">
+                <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
 
                     <input type="text" name="name" placeholder="Your Name" required>
 
