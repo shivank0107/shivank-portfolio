@@ -77,7 +77,15 @@ Contact | Shivank Rastogi
 
                 <h2>Send a Message</h2>
 
-                <form action="#" method="POST">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="form-alert {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form action="{{ url_for('send_message') }}" method="POST">
 
                     <input type="text" name="name" placeholder="Your Name" required>
 
@@ -104,4 +112,4 @@ Contact | Shivank Rastogi
 
 </section>
 
-{% endblock %}  
+{% endblock %}
