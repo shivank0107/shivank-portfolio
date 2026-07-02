@@ -1,182 +1,192 @@
 {% extends "base.html" %}
 
 {% block title %}
-About | Shivank Rastogi
+Projects | Shivank Rastogi
 {% endblock %}
 
 {% block content %}
 
-<!-- ========================= ABOUT SECTION ========================= -->
+<!-- ========================= PROJECTS SECTION ========================= -->
 
-<section class="about" id="about">
+<section class="projects" id="projects">
 
     <div class="container">
 
-        <div class="about-wrapper">
+        <h2 class="section-title fade-up">My Projects</h2>
 
-            <!-- Left: Image -->
+        <p class="section-subtitle fade-up">
 
-            <div class="about-image fade-left">
+            A selection of projects showcasing database design,
+            automation, and full-stack development work.
 
-                <img src="{{ url_for('static', filename='images/about.jpg') }}"
-                     alt="Shivank Rastogi">
+        </p>
 
-            </div>
+        <!-- Search -->
 
-            <!-- Right: Content -->
+        <div class="search-box fade-up">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+        </div>
 
-            <div class="about-content fade-right">
+        <!-- Filters -->
 
-                <h4>About Me</h4>
+        <div class="filter-buttons fade-up">
 
-                <h2>
-
-                    I turn <span>messy data</span> into
-                    reliable, scalable systems
-
-                </h2>
-
-                <p>
-
-                    I'm a Database Developer with hands-on experience
-                    building and optimizing SQL Server and MySQL systems.
-                    My work spans writing efficient queries, designing
-                    ETL pipelines, automating reports with SSRS, and
-                    ensuring data integrity through structured QA testing.
-
-                </p>
-
-                <p>
-
-                    I care about performance as much as correctness —
-                    a query that works isn't enough if it doesn't scale.
-                    Outside of databases, I build clean, functional web
-                    applications using Python and Flask.
-
-                </p>
-
-                <!-- Personal Info -->
-
-                <div class="about-info">
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-user"></i>
-                        <div>
-                            <strong>Name</strong>
-                            <span>Shivank Rastogi</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <span>shivank01@gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Location</strong>
-                            <span>India</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-briefcase"></i>
-                        <div>
-                            <strong>Role</strong>
-                            <span>Database Developer</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Buttons -->
-
-                <div class="about-buttons">
-
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        Let's Talk
-                    </a>
-
-                    <a href="{{ url_for('static', filename='files/Shivank_Resume.pdf') }}"
-                       class="btn btn-outline"
-                       target="_blank">
-                        <i class="fa-solid fa-download"></i>
-                        Resume
-                    </a>
-
-                </div>
-
-            </div>
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="database">Database</button>
+            <button data-filter="python">Python</button>
+            <button data-filter="web">Web App</button>
 
         </div>
 
-        <!-- Stats -->
+        <!-- Project Grid -->
 
-        <div class="about-stats fade-up">
+        <div class="projects-container">
 
-            <div class="stat-card">
-                <h3><span class="counter" data-target="3">0</span>+</h3>
-                <p>Years Experience</p>
-            </div>
+            <!-- Project 1 -->
 
-            <div class="stat-card">
-                <h3><span class="counter" data-target="25">0</span>+</h3>
-                <p>Projects Completed</p>
-            </div>
+            <div class="project-card fade-up" data-category="web">
 
-            <div class="stat-card">
-                <h3><span class="counter" data-target="100">0</span>+</h3>
-                <p>Queries Optimized</p>
-            </div>
+                <img src="{{ url_for('static', filename='images/project1.jpg') }}"
+                     alt="Project Progress Monitoring Portal">
 
-            <div class="stat-card">
-                <h3><span class="counter" data-target="100">0</span>%</h3>
-                <p>Client Satisfaction</p>
-            </div>
+                <div class="project-content">
 
-        </div>
+                    <h2>Project Progress Monitoring Portal (PPM Portal)</h2>
 
-        <!-- What I Do -->
+                    <p>
 
-        <div class="services fade-up">
+                        A centralized portal for Adani Realty & NMDPL
+                        for real-time tracking of construction progress,
+                        milestones, approvals, and resource allocation,
+                        with KPI dashboards and RBAC.
 
-            <h2 class="section-title">What I Do</h2>
+                    </p>
 
-            <p class="section-subtitle">
+                    <div class="badges">
+                        <span>MySQL</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>ETL</span>
+                        <span>RBAC</span>
+                        <span>Git</span>
+                    </div>
 
-                A quick look at where I bring the most value.
+                    <div class="project-footer">
+                        <span><i class="fa-solid fa-star"></i> Featured</span>
+                    </div>
 
-            </p>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>Database Design</h3>
-                    <p>Building normalized, scalable schemas for real-world applications.</p>
                 </div>
 
-                <div class="service-card">
-                    <i class="fa-solid fa-gauge-high"></i>
-                    <h3>Query Optimization</h3>
-                    <p>Rewriting slow queries and indexing strategies for performance.</p>
+            </div>
+
+            <!-- Project 2 -->
+
+            <div class="project-card fade-up" data-category="web">
+
+                <img src="{{ url_for('static', filename='images/project2.jpg') }}"
+                     alt="ShipShopy Logistics Platform">
+
+                <div class="project-content">
+
+                    <h2>ShipShopy – Logistics & Delivery Management System</h2>
+
+                    <p>
+
+                        A logistics and delivery management platform for
+                        ShipShopy Private Limited, covering warehouse,
+                        courier, and order management with automated
+                        ETL jobs and operational dashboards.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>MySQL</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>ETL</span>
+                        <span>RBAC</span>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <span><i class="fa-solid fa-star"></i> Featured</span>
+                    </div>
+
                 </div>
 
-                <div class="service-card">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                    <h3>ETL & Automation</h3>
-                    <p>Automating data pipelines using SSIS and Python scripts.</p>
+            </div>
+
+            <!-- Project 3 -->
+
+            <div class="project-card fade-up" data-category="database">
+
+                <img src="{{ url_for('static', filename='images/project3.jpg') }}"
+                     alt="RIMS Retail Management Software">
+
+                <div class="project-content">
+
+                    <h2>RIMS – Retail Management Software</h2>
+
+                    <p>
+
+                        SQL Server databases for billing, inventory,
+                        and customer analytics, with optimized stored
+                        procedures and automated ETL reconciliation
+                        workflows.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>SQL Server</span>
+                        <span>T-SQL</span>
+                        <span>ETL</span>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <span></span>
+                    </div>
+
                 </div>
 
-                <div class="service-card">
-                    <i class="fa-solid fa-vial"></i>
-                    <h3>QA Testing</h3>
-                    <p>Validating data accuracy and system reliability before release.</p>
+            </div>
+
+            <!-- Project 4 -->
+
+            <div class="project-card fade-up" data-category="database">
+
+                <img src="{{ url_for('static', filename='images/project4.jpg') }}"
+                     alt="Data Validation System">
+
+                <div class="project-content">
+
+                    <h2>DVS – Data Validation System</h2>
+
+                    <p>
+
+                        A data validation framework with audit tables
+                        and triggers to catch discrepancies early,
+                        with automated reports and query optimization.
+
+                    </p>
+
+                    <div class="badges">
+                        <span>SQL Server</span>
+                        <span>Audit Logging</span>
+                        <span>Query Optimization</span>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <span></span>
+                    </div>
+
                 </div>
 
             </div>
